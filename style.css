@@ -19,6 +19,10 @@ body{
     margin: auto;
 }
 
+header{
+    padding: 2em 0 2em 0;
+}
+
 picture, img{
     max-width: 100%;
     display: block;
@@ -27,9 +31,7 @@ picture, img{
 .main-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2.5em;
-    height: 100%;
 }
 
 .logo-and-nav-container{
@@ -42,6 +44,14 @@ picture, img{
 nav {
     display: flex;
     gap: 2em;
+}
+
+nav a{
+    transition: 150ms color ease-in-out;
+}
+
+nav a:hover{
+    color: hsl(5, 85%, 63%);
 }
 
 .featured-and-new-articles-container{
@@ -84,6 +94,11 @@ button{
     font-weight: 700;
     color: hsl(0, 0%, 100%);
     width: fit-content;
+    transition: 150ms background-color ease-in-out;
+}
+
+button:hover{
+    background-color: hsl(240, 100%, 5%);
 }
 
 .new-articles-container{
@@ -114,6 +129,11 @@ button{
     font-size: 1.2em;
     color: hsl(0, 0%, 100%);
     margin-bottom: .5em;
+    transition: 150ms color ease-in-out;
+}
+
+.article h3:hover{
+    color: hsl(35, 77%, 62%);
 }
 
 .article h4{
@@ -157,6 +177,12 @@ button{
 
 .other-article h3{
     font-size: 1em;
+    transition: 150ms color ease-in-out;
+}
+
+.other-article h3:hover{
+    color: hsl(5, 85%, 63%);
+
 }
 
 .other-article h4{
@@ -166,4 +192,45 @@ button{
     max-width: 24ch;
 }
 
+@media(max-width: 375px){
+    .logo-and-nav-container{
+        padding: 1em;
+    }
+
+    .sidebar-menu-container{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5em;
+        padding: 2em;
+        inset: 0 0 0 35%;
+        background-color: hsl(0, 0%, 100%);
+        z-index: 999;
+    }
+
+    .sidebar-menu-container img{
+        width: 2em;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-self: flex-start;
+        background-color: hsl(0, 0%, 100%); 
+    }
+
+    .featured-and-new-articles-container{
+        grid-template-areas: "img"
+                             "featured-title"
+                             "featured-paragraph"
+                             "new-articles";
+        padding: 1em;
+    }
+
+    .other-articles-container{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        padding: 1em;
+    }
+}
 

@@ -11,21 +11,21 @@
   <title>News homepage</title>
 </head>
 <body>
+  <header class="logo-and-nav-container">
+    <img src="./assets/images/logo.svg" alt="the company's logo">
+    <nav class="navbar">
+      <a href="">Home</a>
+      <a href="">New</a>
+      <a href="">Popular</a>
+      <a href="">Trending</a>
+      <a href="">Categories</a>
+    </nav>
+  </header>
   <div class="main-container">
-    <div class="logo-and-nav-container">
-      <img src="./assets/images/logo.svg" alt="the company's logo">
-      <nav>
-        <a href="">Home</a>
-        <a href="">New</a>
-        <a href="">Popular</a>
-        <a href="">Trending</a>
-        <a href="">Categories</a>
-      </nav>
-    </div>
-  
     <div class="featured-and-new-articles-container">
         <picture class="featured-img">
-          <img srcset="./assets/images/image-web-3-desktop.jpg" alt="image from the article" >
+          <source srcset="./assets/images/image-web-3-mobile.jpg" media="(max-width: 375px)" alt="image from the article">
+          <img srcset="./assets/images/image-web-3-desktop.jpg" alt="image from the article">
         </picture>
         <div class="title-container">
           <h1>The Bright Future of Web 3.0?</h1>
@@ -80,6 +80,6 @@
       </div>
     </div>
   </div>
-
 </body>
+<script src="./app.js"></script>
 </html>
