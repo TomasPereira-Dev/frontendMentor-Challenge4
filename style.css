@@ -192,7 +192,7 @@ button:hover{
     max-width: 24ch;
 }
 
-@media(max-width: 375px){
+@media(max-width: 425px){
     .logo-and-nav-container{
         padding: 1em;
     }

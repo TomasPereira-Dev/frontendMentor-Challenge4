@@ -1,4 +1,4 @@
-const mediaQuery = window.matchMedia('(max-width: 375px)');
+const mediaQuery = window.matchMedia('(max-width: 425px)');
 const navbar = document.querySelector(".navbar");
 const header = document.querySelector(".logo-and-nav-container");
 
@@ -13,7 +13,10 @@ const handleMobileChange = (mediaQueryList) => {
     if(mediaQuery.matches){
         navbar.remove();
         header.appendChild(hamburgerBtnElement);
-    };
+    }else{
+        hamburgerBtnElement.remove()
+        header.appendChild(navbar);
+    }
 };
 handleMobileChange(mediaQuery);
 mediaQuery.addEventListener("change", handleMobileChange);
