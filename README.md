@@ -1,94 +1,223 @@
-# Frontend Mentor - News homepage
+# Frontend Mentor - News homepage solution
 
-![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)
+Hey, what's up?.
 
-## Welcome! 👋
+This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
 
-Thanks for checking out this front-end coding challenge.
+(free) Junior challenge 2/27
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Table of contents
 
-**To do this challenge, you need a good understanding of HTML and CSS, and basic JavaScript.**
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [For desktop](#for-desktop)
+  - [For mobile](#for-mobile)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## The challenge
+## Overview
 
-Your challenge is to build out this news website homepage and get it looking as close to the design as possible.
+This challenge consisted in a mixed layout using both flexbox and grid, and a hambuger-type navigation menu for the mobile version, it's a great
+project to learn WHEN you should use flexbox or grid, how to use grid-template-areas and how to use JS with media queries.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### The challenge
 
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.jpg)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Links
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Solution : [https://www.frontendmentor.io/solutions/news-homepage-with-grid-and-flexbox-DrkhLYPD1k](https://www.frontendmentor.io/solutions/news-homepage-with-grid-and-flexbox-DrkhLYPD1k)
+- Live Site: [https://tomaspereira-dev.github.io/frontendMentor-Challenge4/](https://tomaspereira-dev.github.io/frontendMentor-Challenge4/)
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+## My process
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+  ### For desktop 
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+  This challenge was a little tricky, here is why.
+  You might want to use only one technology for the layout, but if you try you will notice that both flexbox and grid work in a different way.
 
-## Building your project
+  With flexbox:
+  - Elements become flexible, and they will grow or shring depending of their content(intrinsic sizing).
+  - Every parent becomes a row by default (flex-direction: row).
+  - Every direct child a is column by default, even if there will be some overflow. 
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+  While with grid:
+  - Elements work in a structured, 2-dimensional layout (when declaring a grid-template), they are independent of their content (for example, if
+    grid-template-rows has 1fr 1fr as values, it will only create 2 rows and every element will have the same size of 1fr, no matter what's inside themselves).
+  - Every parent has grid-auto-flow: row; by default, every direct child will be a new row.
+  - it uses a "sparse" algorithm by default, it means that if there is a hole in the grid it will not try to fill it automatically,
+    so the auto-placed items appear in order.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+  Having this in mind, you should choose flexbox when you need the elements to have a flexible size, depending of their content so there will be no useless space inside them(for example: a navbar), and grid when you need a more rigid layout with the elements being the same size all the time (for example: a container that needs to be separated in even fractions).
 
-## Deploying your project
+  You can also mix both grid and flexbox to do really cool things, so feel free to experiment, try using flexbox with children that are inside a parent with grid, the sky is the limit my friend :).
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+  In my case I used 2 grids, one for the main article and new articles section, and a second one for the less important ones on the bottom. and flexbox for the navbar.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+  At the momment of building the main articles grid it's a good idea to draw over the design example some lines to know how many rows or columns you will need, some people use paint or draw it in paper, what i found useful is using the [Designer Tools Chrome extension](https://chrome.google.com/webstore/detail/designer-tools/jiiidpmjdakhbgkbdchmhmnfbdebfnhp) made by [baars.design](https://baars.design/), it let you add rulers to every tab, so you can have a more pixel perfect clone of your challenges.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+  The easier way to do grid layouts is using grid-template-areas, with it you can specify the ammount of space a element will use, and it's easier to read that declaring grid-template-rows/columns, it needs a little bit of setup tho, you need tho name every element of the grid with grid-area first, the name should be written without quotes, else will not work, it's a common mistake.
 
-## Create a custom `README.md`
+  If you write something like this:
+  ```
+  .main-article-and-new-articles-container{
+    display: grid; 
+    grid-template-areas: "featured-img featured-img new-articles"
+                         "featured-title featured-p new-articles";
+  }
+  ```
+  (note: I skipped the naming of the elements for sake of brevity)
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+  You will end with this:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+  It's like making a collage with paper, but instead you use words. cool isn't it?.
 
-## Submitting your solution
+  In the case of the second grid, the one at the bottom with the numbered articles I used grid-template-columns: repeat(3, 1fr); because it doesn't have the complexity that the first has, what you are saying with that is "create 3 columns, 1fr each".
+  
+  When it comes to stuff like adding margins inside the elements I use flexbox in every element and add a gap, generaly between 1 and 2 em, you can do it with grid also, it adds both vertical and horizontal gaps between all the elements, I find it more clean than adding margins and it's useful for having everything aligned correctly. It's important to explain why ems instead of other measurment, this has to do with a graphic design rule: when spacing (or adding size), all spaces(horizontal and vertical distances between elements) are set in increments of 8 or .5em in our case, if you need you can cut the increment to 4 too, [this article explains it in a greater detail, check it out, is life-changeing](https://uxplanet.org/spacing-guide-for-designers-5bd140afe52a).
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+  ### For mobile:
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+  Here you need to change 2 main things, how the layout flows, and create a new type of navbar menu.
 
-## Sharing your solution
+  Because I used grid-template-areas before, what I needed to do is writing it in a media query like this:
 
-There are multiple places you can share your solution:
+  ```
+  @media(max-width: 425px){
+    .main-article-and-new-articles-container{
+      display: grid; 
+      grid-template-areas: "featured-img"
+                           "featured-title"
+                           "featured-p"
+                           "new-articles";
+    }
+  }
+  ```
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+  Also the featured-img is different, is a new img with a different size, for this I used the picture element in HTML, it let you change an img to another based on the queries that you set, here is how:
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+  ```
+    <picture class="featured-img">
+      <source srcset="./assets/images/image-web-3-mobile.jpg" media="(max-width: 425px)" alt="image from the article">
+      <img srcset="./assets/images/image-web-3-desktop.jpg" alt="image from the article">
+    </picture>
+  ```
+  [You can find an in-depth explanation here from Chris Coyer of CSS-Tricks](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/).
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+  I made the mobile menu creating it's elements with JS, manipulating the DOM, this is because when it's not in use it shouldn't be in the HTML, wasting space for nothing, adding display: none; to the parent container it's like hiding something behind a curtain, it's still there even if you don't see it.
 
-## Got feedback for us?
+  JS needs to know where a media query is active, for this I used the matchMedia method, works similar to a querySelector.
+  Then added some logic, if the media query exists, then the function will remove the navbar from the DOM and append a hamburger button to the header where the navbar was, every element here must be created before you append it, like this:
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+  ```
+    //creates menu elements for the mobile version's menu. 
+    const hamburgerBtnElement = document.createElement("img");
+    hamburgerBtnElement.setAttribute("class", "hamburger-button");
+    hamburgerBtnElement.setAttribute("src", "./assets/images/icon-menu.svg");
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+    //if the media query changes to 425px, the desktop version of the navbar is removed from the DOM
+    //and the hamburger button gets appended to the header.
+    const handleMobileChange = (mediaQueryList) => {
+        if(mediaQuery.matches){
+            navbar.remove();
+            header.appendChild(hamburgerBtnElement);
+        }else{
+            hamburgerBtnElement.remove()
+            header.appendChild(navbar);
+        }
+    };
+    handleMobileChange(mediaQuery);
+    mediaQuery.addEventListener("change", handleMobileChange);
+  ```
 
-**Have fun building!** 🚀
+  Now that JS knows when the media query is active we need to add functionality to the buttons for the menu, so it can close or open on a click
+  The aproach is like the last example, except id doesn't use a condition, the function runs when the hamburger button or the X are being clicked.
+
+  ```
+    const closeMenuBtn = document.createElement("img");
+    closeMenuBtn.setAttribute("class", "close-menu-button");
+    closeMenuBtn.setAttribute("src", "./assets/images/icon-menu-close.svg")
+    const sidebarMenuContainer = document.createElement("div");
+    sidebarMenuContainer.setAttribute("class", "sidebar-menu-container");
+
+    //when the menu img is clicked, the hamburger button is removed from the DOM and the new menu is appended to it.
+    const handleMenuClick = () =>{
+        sidebarMenuContainer.appendChild(closeMenuBtn);
+        sidebarMenuContainer.appendChild(navbar);
+        hamburgerBtnElement.remove();
+        header.appendChild(sidebarMenuContainer);
+    };
+    hamburgerBtnElement.addEventListener("click", handleMenuClick);
+
+    const handleMenuClose = () => {
+        sidebarMenuContainer.remove();
+        header.appendChild(hamburgerBtnElement);
+    };
+    closeMenuBtn.addEventListener("click", handleMenuClose);
+  ```
+  And that's it now you have a mobile hamburger-type menu, the last thing you need to know about it is its styling, because it only shows when you use the mobile version, everything is written inside the media query, I have doubts when it comes to this, so I learned how to do it by watching a [Kevin Powell tutorial](https://youtu.be/HbBMp6yUXO0?t=598), Here he adds position: fixed; to the container, so it height will be as big as the screen, and  the inset property, that is shorthand to top, left, right and bottom properties, also the container needs to be on top of everything else, so you need to add Z-index to it, because the button and the links of the menu go in diferent directions I added justify-content: flex-end to the first and flex-start to the other.
+
+  ```
+    .sidebar-menu-container{
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5em;
+      padding: 2em;
+      inset: 0 0 0 35%;
+      background-color: hsl(0, 0%, 100%);
+      z-index: 999;
+    }
+
+    ...
+
+    .navbar{
+      flex-direction: column;
+      align-self: flex-start;
+      background-color: hsl(0, 0%, 100%); 
+    }
+  ```  
+### Built with
+
+- vanilla JS
+- grid
+- flexbox
+
+
+### What I learned
+
+- How to use media queries with JS
+- When to use grid or flexbox and grid-template-areas  
+
+### Continued development
+
+This project has few issues, there is too much space between the title of the main article and its paragraph, its button is not 100% exact and also i couldn't align the page to the center correctly, when I tried for some reason I don't understand the main container went up, outside the screen, like if the center of the page was outside my viewport, when I asked no one knew how to fix this and told me to leave it like it was because that space was probably it was not part of the project, that was something about figma instead, but I will try my best to find a better way to do the project once again in the future.
+
+### Useful resources
+
+- [Kevin Powell's way to do a burger-type menu](https://youtu.be/HbBMp6yUXO0?t=598)
+- [Chris Coyer's in-depth explanation about responsive images](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/).
+- [Designer Tools Chrome extension](https://chrome.google.com/webstore/detail/designer-tools/jiiidpmjdakhbgkbdchmhmnfbdebfnhp).
+- [Spacing and sizing rules to improve as a designer](https://uxplanet.org/spacing-guide-for-designers-5bd140afe52a).
+
+## Author
+
+- Portfolio - [Tomás Pereira](https://tomaspereira-dev.github.io/Portfolio/)
+- Frontend Mentor - [@TomasPereira-Dev](https://www.frontendmentor.io/profile/TomasPereira-Dev)
+- Twitter - [@TomasPereira_JS](https://www.twitter.com/TomasPereira_JS)
