@@ -35,8 +35,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![screenshot](https://github.com/TomasPereira-Dev/frontendMentor-Challenge4/assets/81960258/2ff81831-d907-40b6-973c-be5958d41bc4)
 
 ### Links
 
@@ -70,6 +69,8 @@ Users should be able to:
 
   At the momment of building the main articles grid it's a good idea to draw over the design example some lines to know how many rows or columns you will need, some people use paint or draw it in paper, what i found useful is using the [Designer Tools Chrome extension](https://chrome.google.com/webstore/detail/designer-tools/jiiidpmjdakhbgkbdchmhmnfbdebfnhp) made by [baars.design](https://baars.design/), it let you add rulers to every tab, so you can have a more pixel perfect clone of your challenges.
 
+  ![design tools screenshot](https://github.com/TomasPereira-Dev/frontendMentor-Challenge4/assets/81960258/e6d9ba40-ec59-4ede-8e06-04dccc2c83c9)
+
   The easier way to do grid layouts is using grid-template-areas, with it you can specify the ammount of space a element will use, and it's easier to read that declaring grid-template-rows/columns, it needs a little bit of setup tho, you need tho name every element of the grid with grid-area first, the name should be written without quotes, else will not work, it's a common mistake.
 
   If you write something like this:
@@ -83,8 +84,9 @@ Users should be able to:
   (note: I skipped the naming of the elements for sake of brevity)
 
   You will end with this:
-
-
+  
+  ![grid area example](https://github.com/TomasPereira-Dev/frontendMentor-Challenge4/assets/81960258/8a1f8ebc-46cf-460c-81b7-b11d1fe865a2)
+  
   It's like making a collage with paper, but instead you use words. cool isn't it?.
 
   In the case of the second grid, the one at the bottom with the numbered articles I used grid-template-columns: repeat(3, 1fr); because it doesn't have the complexity that the first has, what you are saying with that is "create 3 columns, 1fr each".
