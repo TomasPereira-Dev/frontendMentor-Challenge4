@@ -71,7 +71,7 @@ Users should be able to:
 
   ![design tools screenshot](https://github.com/TomasPereira-Dev/frontendMentor-Challenge4/assets/81960258/e6d9ba40-ec59-4ede-8e06-04dccc2c83c9)
 
-  The easier way to do grid layouts is using grid-template-areas, with it you can specify the ammount of space a element will use, and it's easier to read that declaring grid-template-rows/columns, it needs a little bit of setup tho, you need tho name every element of the grid with grid-area first, the name should be written without quotes, else will not work, it's a common mistake.
+  The easier way to do grid layouts is using grid-template-areas, with it you can specify the amount of space a element will use, and it's easier to read than declaring grid-template-rows/columns, it needs a little bit of setup tho, you need tho name every element of the grid with grid-area first, the name should be written without quotes, else will not work, it's a common mistake.
 
   If you write something like this:
   ```
